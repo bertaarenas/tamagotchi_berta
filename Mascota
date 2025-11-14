@@ -35,16 +35,91 @@ public class Main {
 
             if (modCont == 2) {
                 System.out.println("Usted ha decidido modificar");
+                break;
             }
             else {
                 System.out.println("Usted ha decidido continuar");
                 introduccion = false;
             }
-            
+
             //Inicio juego
-            
+
+            System.out.println("Bienvenido al juego!");
+            if (aspectoTamagotchi == 1) {
+                System.out.println(nombreTamagotchi + "\uD83D\uDC3C");
+            } else if (aspectoTamagotchi == 2) {
+                System.out.println(nombreTamagotchi + "\uD83D\uDC2D");
+            } else if (aspectoTamagotchi == 3) {
+                System.out.println(nombreTamagotchi + "\uD83D\uDC28");
+            } else if (aspectoTamagotchi == 4) {
+                System.out.println(nombreTamagotchi + "\uD83E\uDD81");
+            } else {
+                System.out.println(nombreTamagotchi + "\uD83D\uDC2F");
+            }
+
+            int energia = 5;
+            int hambre = 5;
+            int felicidad = 5;
+            int dinero = 5;
+
+            System.out.println("Energía: " + energia + " | Hambre: " + hambre + " | Felicidad: " + felicidad + " | Dinero: " + dinero);
+
+            System.out.println("Que desea hacer ahora?");
+            System.out.println("1. Dar de comer.");
+            System.out.println("2. Jugar");
+            System.out.println("3. Dormir");
+            System.out.println("4. Tienda");
+            System.out.println("5. Estado");
+            System.out.println("6. Salir");
+            System.out.println("Introduzca un número del 1 al 6 según su deseo.");
+
+            int eleccion = sc.nextInt();
+
+            int hamburguesa = 1;
+            int pretzel = 1;
+            int perrito = 1;
+            int comida = hamburguesa + pretzel + perrito;
+
+            switch (eleccion) {
+                case 1:
+                    if (comida > 0) {
+                        System.out.println("El estado actual de hambre de " + nombreTamagotchi + " es de " + hambre);
+                        System.out.println("Tienes " + hamburguesa + " hamburguesa, " + pretzel + " pretzel i " + perrito + "perrito.");
+                        System.out.println("Que desea darle de comer?");
+
+                        String lineaNula = sc.nextLine();
+                        String darComer = sc.nextLine();
+
+                        if (darComer.equals("Hamburguesa")) {
+                            hamburguesa--;
+                            hambre = hambre - 3;
+                            energia = energia + 1;
+                            System.out.println("Te quedan " + hamburguesa + " hamburguesas");
+                        }
+                        else if (darComer.equals("Pretzel")) {
+                            pretzel--;
+                            hambre = hambre - 3;
+                            energia = energia + 1;
+                            System.out.println("Te quedan " + pretzel + " pretzels");
+                        }
+                        else {
+                            perrito--;
+                            hambre = hambre - 3;
+                            energia = energia + 1;
+                            System.out.println("Te quedan " + perrito + " perritos");
+                        }
+                    }
+                    else {
+                        System.out.println("El estado actual de hambre de " + nombreTamagotchi + " es de " + hambre);
+                        System.out.println("No tienes comida. Compra en la tienda.");
+                    }
+
+            }
+
+
+
+
 
 
         }
     }
-}
