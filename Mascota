@@ -1,0 +1,50 @@
+import java.sql.SQLOutput;
+import java.util.Scanner;
+public class Main {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        boolean introduccion = true;
+
+        //Introduccion al juego
+        while(introduccion == true) {
+            System.out.println("Hola jugador! A partir de ahora eres el cuidador de un tamagotchi. Para comenzar, que nombre deseas ponerle?");
+
+            String nombreTamagotchi = sc.nextLine();
+
+            System.out.println("Su tamagotchi se llama " + nombreTamagotchi + ". Que aspecto desea ponerle ahora?");
+            System.out.println("1)\uD83D\uDC3C 2)\uD83D\uDC2D 3)\uD83D\uDC28 4)\uD83E\uDD81 5)\uD83D\uDC2F");
+            System.out.println("Introduce un número del 1 al 5");
+
+            int aspectoTamagotchi = sc.nextInt();
+
+            if (aspectoTamagotchi == 1) {
+                System.out.println("Enorhabuena su mascota ha sido creada, " + nombreTamagotchi + "\uD83D\uDC3C");
+            } else if (aspectoTamagotchi == 2) {
+                System.out.println("Enorhabuena su mascota ha sido creada, " + nombreTamagotchi + "\uD83D\uDC2D");
+            } else if (aspectoTamagotchi == 3) {
+                System.out.println("Enorhabuena su mascota ha sido creada, " + nombreTamagotchi + "\uD83D\uDC28");
+            } else if (aspectoTamagotchi == 4) {
+                System.out.println("Enorhabuena su mascota ha sido creada, " + nombreTamagotchi + "\uD83E\uDD81");
+            } else {
+                System.out.println("Enorhabuena su mascota ha sido creada, " + nombreTamagotchi + "\uD83D\uDC2F");
+            }
+            System.out.println("Desea modificar algo o quiere continuar?");
+            System.out.println("Escriba 1 si desea continuar o 2 si desea modificar.");
+
+            int modCont = sc.nextInt();
+
+            if (modCont == 2) {
+                System.out.println("Usted ha decidido modificar");
+            }
+            else {
+                System.out.println("Usted ha decidido continuar");
+                introduccion = false;
+            }
+            
+            //Inicio juego
+            
+
+
+        }
+    }
+}
