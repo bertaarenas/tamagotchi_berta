@@ -83,66 +83,126 @@ public class Main {
                 int eleccion = sc.nextInt();
                 switch (eleccion) {
                     case 1:
-                        if (comida > 0) {
+                        if (comida > 0 && hambre < 10) {
                             System.out.println("El estado actual de hambre de " + nombreTamagotchi + " es de " + hambre);
-                            System.out.println("Tienes " + hamburguesa + " hamburguesa, " + pretzel + " pretzel i " + perrito + "perrito.");
+                            System.out.println("Tienes " + hamburguesa + " hamburguesa\uD83C\uDF54, " + pretzel + " pretzel\uD83E\uDD68 i " + perrito + " perrito\uD83C\uDF2D.");
                             System.out.println("Que desea darle de comer?");
 
                             String lineaNula = sc.nextLine();
                             String darComer = sc.nextLine();
 
-                            if (darComer.equals("Hamburguesa")) {
+                            if (darComer.equals("Hamburguesa") || darComer.equals("hamburguesa")) {
                                 hamburguesa--;
                                 hambre = hambre - 3;
                                 energia = energia + 1;
+                                if (hambre == 0 || energia == 0 || felicidad == 0) {
+                                    System.out.println("El estado actual de " + nombreTamagotchi + "→ Energía: " + energia + " | Hambre: " + hambre + " | Felicidad: " + felicidad + " | Dinero: " + dinero);
+                                    System.out.println(nombreTamagotchi + " ha muerto.");
+                                    System.exit(0);
+                                }
                                 System.out.println("Te quedan " + hamburguesa + " hamburguesas");
                                 System.out.println("El estado actual de " + nombreTamagotchi + "→ Energía: " + energia + " | Hambre: " + hambre + " | Felicidad: " + felicidad + " | Dinero: " + dinero);
-                            } else if (darComer.equals("Pretzel")) {
+                                System.out.println("Que desea hacer ahora?");
+                                System.out.println("1. Dar de comer");
+                                System.out.println("2. Dormir");
+                                System.out.println("3. Jugar");
+                                System.out.println("4. Tienda");
+                                System.out.println("5. Estado");
+                                System.out.println("6. Salir");
+
+                            } else if (darComer.equals("Pretzel") || darComer.equals("pretzel")) {
                                 pretzel--;
                                 hambre = hambre - 3;
                                 energia = energia + 1;
+                                if (hambre == 0 || energia == 0 || felicidad == 0) {
+                                    System.out.println("El estado actual de " + nombreTamagotchi + "→ Energía: " + energia + " | Hambre: " + hambre + " | Felicidad: " + felicidad + " | Dinero: " + dinero);
+                                    System.out.println(nombreTamagotchi + " ha muerto.");
+                                    System.exit(0);
+                                }
                                 System.out.println("Te quedan " + pretzel + " pretzels");
                                 System.out.println("El estado actual de " + nombreTamagotchi + "→ Energía: " + energia + " | Hambre: " + hambre + " | Felicidad: " + felicidad + " | Dinero: " + dinero);
-                            } else {
+                                System.out.println("Que desea hacer ahora?");
+                                System.out.println("1. Dar de comer");
+                                System.out.println("2. Dormir");
+                                System.out.println("3. Jugar");
+                                System.out.println("4. Tienda");
+                                System.out.println("5. Estado");
+                                System.out.println("6. Salir");
+
+                            } else if (darComer.equals("Perrito") || darComer.equals("perrito")) {
                                 perrito--;
                                 hambre = hambre - 3;
                                 energia = energia + 1;
+                                if (hambre == 0 || energia == 0 || felicidad == 0) {
+                                    System.out.println("El estado actual de " + nombreTamagotchi + "→ Energía: " + energia + " | Hambre: " + hambre + " | Felicidad: " + felicidad + " | Dinero: " + dinero);
+                                    System.out.println(nombreTamagotchi + " ha muerto.");
+                                    System.exit(0);
+                                }
                                 System.out.println("Te quedan " + perrito + " perritos");
                                 System.out.println("El estado actual de " + nombreTamagotchi + "→ Energía: " + energia + " | Hambre: " + hambre + " | Felicidad: " + felicidad + " | Dinero: " + dinero);
+                                System.out.println("Que desea hacer ahora?");
+                                System.out.println("1. Dar de comer");
+                                System.out.println("2. Dormir");
+                                System.out.println("3. Jugar");
+                                System.out.println("4. Tienda");
+                                System.out.println("5. Estado");
+                                System.out.println("6. Salir");
                             }
                         } else {
                             System.out.println("El estado actual de hambre de " + nombreTamagotchi + " es de " + hambre);
-                            System.out.println("No tienes comida. Compra en la tienda.");
+                            System.out.println("No tienes comida. Si quiere puede comprar en la tienda.");
+                            System.out.println("Que desea hacer ahora?");
+                            System.out.println("1. Dar de comer");
+                            System.out.println("2. Dormir");
+                            System.out.println("3. Jugar");
+                            System.out.println("4. Tienda");
+                            System.out.println("5. Estado");
+                            System.out.println("6. Salir");
                         }
                         break;
                     case 2:
+                        if (energia < 10) {
+                            System.out.println(nombreTamagotchi + " ahora va a dormir.");
+                            System.out.println("Introduce los números del 1 al 10, para que " + nombreTamagotchi + " pueda dormir.");
+                            int dormir1 = sc.nextInt();
+                            int dormir2 = sc.nextInt();
+                            int dormir3 = sc.nextInt();
+                            int dormir4 = sc.nextInt();
+                            int dormir5 = sc.nextInt();
+                            int dormir6 = sc.nextInt();
+                            int dormir7 = sc.nextInt();
+                            int dormir8 = sc.nextInt();
+                            int dormir9 = sc.nextInt();
+                            int dormir10 = sc.nextInt();
 
-                        System.out.println(nombreTamagotchi + " ahora va a dormir.");
-                        System.out.println("Introduce los números del 1 al 10, para que " + nombreTamagotchi + " pueda dormir.");
-                        int dormir1 = sc.nextInt();
-                        int dormir2 = sc.nextInt();
-                        int dormir3 = sc.nextInt();
-                        int dormir4 = sc.nextInt();
-                        int dormir5 = sc.nextInt();
-                        int dormir6 = sc.nextInt();
-                        int dormir7 = sc.nextInt();
-                        int dormir8 = sc.nextInt();
-                        int dormir9 = sc.nextInt();
-                        int dormir10 = sc.nextInt();
+                            energia = energia + 4;
+                            felicidad = felicidad - 1;
 
-                        energia = energia + 4;
-                        felicidad = felicidad - 1;
+                            if (hambre == 0 || energia == 0 || felicidad == 0) {
+                                System.out.println("El estado actual de " + nombreTamagotchi + "→ Energía: " + energia + " | Hambre: " + hambre + " | Felicidad: " + felicidad + " | Dinero: " + dinero);
+                                System.out.println(nombreTamagotchi + " ha muerto.");
+                                System.exit(0);
+                            }
+                        }
 
                         System.out.println("Genial!, ahora " + nombreTamagotchi + " tiene " + energia + " de energia.");
+                        System.out.println("Que desea hacer ahora?");
+                        System.out.println("1. Dar de comer");
+                        System.out.println("2. Dormir");
+                        System.out.println("3. Jugar");
+                        System.out.println("4. Tienda");
+                        System.out.println("5. Estado");
+                        System.out.println("6. Salir");
                         break;
 
                     case 3:
+                        if (dinero < 10) {
                         System.out.println("Escoge uno 1 si quieres jugar al PiedraPapelTijera y 2 si quieres jugar a los dados.");
 
                         int Escogerjuego = sc.nextInt();
 
                         if (Escogerjuego == 1) {
-                            System.out.println("Esto es el juego de piedra, papel o tijera, selecciona 1 al 3 dependiendo de tu elección.");
+                            System.out.println("Esto es el juego de piedra, papel o tijera, selecciona 1 al 3 dependiendo de tu elección. Si gana el jugador obtendra +2 de felicidad, +3 monedas y -2 energia, en cambio si pierde, pierde -1 de felicidad, y por último en caso de empate no pasara nada.");
                             System.out.println("1 = piedra, 2 = papel y 3 = tijera");
 
                             int numeroEscogido = sc.nextInt();
@@ -155,12 +215,32 @@ public class Main {
                                         case 1: // Piedra
                                             System.out.println("número random: " + randomNum);
                                             System.out.println("Empate!");
+                                            System.out.println("El estado actual de " + nombreTamagotchi + "→ Energía: " + energia + " | Hambre: " + hambre + " | Felicidad: " + felicidad + " | Dinero: " + dinero);
+                                            System.out.println("Que desea hacer ahora?");
+                                            System.out.println("1. Dar de comer");
+                                            System.out.println("2. Dormir");
+                                            System.out.println("3. Jugar");
+                                            System.out.println("4. Tienda");
+                                            System.out.println("5. Estado");
+                                            System.out.println("6. Salir");
                                             break;
                                         case 2: // Papel
                                             System.out.println("número random: " + randomNum);
                                             System.out.println("Has perdido.");
                                             felicidad -= 1;
+                                            if (hambre == 0 || energia == 0 || felicidad == 0) {
+                                                System.out.println("El estado actual de " + nombreTamagotchi + "→ Energía: " + energia + " | Hambre: " + hambre + " | Felicidad: " + felicidad + " | Dinero: " + dinero);
+                                                System.out.println(nombreTamagotchi + " ha muerto.");
+                                                System.exit(0);
+                                            }
                                             System.out.println("El estado actual de " + nombreTamagotchi + "→ Energía: " + energia + " | Hambre: " + hambre + " | Felicidad: " + felicidad + " | Dinero: " + dinero);
+                                            System.out.println("Que desea hacer ahora?");
+                                            System.out.println("1. Dar de comer");
+                                            System.out.println("2. Dormir");
+                                            System.out.println("3. Jugar");
+                                            System.out.println("4. Tienda");
+                                            System.out.println("5. Estado");
+                                            System.out.println("6. Salir");
                                             break;
                                         case 3: //Tijera
                                             System.out.println("número random: " + randomNum);
@@ -168,7 +248,19 @@ public class Main {
                                             felicidad += 2;
                                             dinero += 3;
                                             energia -= 2;
+                                            if (hambre == 0 || energia == 0 || felicidad == 0) {
+                                                System.out.println("El estado actual de " + nombreTamagotchi + "→ Energía: " + energia + " | Hambre: " + hambre + " | Felicidad: " + felicidad + " | Dinero: " + dinero);
+                                                System.out.println(nombreTamagotchi + " ha muerto.");
+                                                System.exit(0);
+                                            }
                                             System.out.println("El estado actual de " + nombreTamagotchi + "→ Energía: " + energia + " | Hambre: " + hambre + " | Felicidad: " + felicidad + " | Dinero: " + dinero);
+                                            System.out.println("Que desea hacer ahora?");
+                                            System.out.println("1. Dar de comer");
+                                            System.out.println("2. Dormir");
+                                            System.out.println("3. Jugar");
+                                            System.out.println("4. Tienda");
+                                            System.out.println("5. Estado");
+                                            System.out.println("6. Salir");
                                             break;
                                     }
                                     break;
@@ -180,17 +272,49 @@ public class Main {
                                             felicidad += 2;
                                             dinero += 3;
                                             energia -= 2;
+                                            if (hambre == 0 || energia == 0 || felicidad == 0) {
+                                                System.out.println("El estado actual de " + nombreTamagotchi + "→ Energía: " + energia + " | Hambre: " + hambre + " | Felicidad: " + felicidad + " | Dinero: " + dinero);
+                                                System.out.println(nombreTamagotchi + " ha muerto.");
+                                                System.exit(0);
+                                            }
                                             System.out.println("El estado actual de " + nombreTamagotchi + "→ Energía: " + energia + " | Hambre: " + hambre + " | Felicidad: " + felicidad + " | Dinero: " + dinero);
+                                            System.out.println("Que desea hacer ahora?");
+                                            System.out.println("1. Dar de comer");
+                                            System.out.println("2. Dormir");
+                                            System.out.println("3. Jugar");
+                                            System.out.println("4. Tienda");
+                                            System.out.println("5. Estado");
+                                            System.out.println("6. Salir");
                                             break;
                                         case 2: // Papel
                                             System.out.println("número random: " + randomNum);
                                             System.out.println("Empate!");
+                                            System.out.println("El estado actual de " + nombreTamagotchi + "→ Energía: " + energia + " | Hambre: " + hambre + " | Felicidad: " + felicidad + " | Dinero: " + dinero);
+                                            System.out.println("Que desea hacer ahora?");
+                                            System.out.println("1. Dar de comer");
+                                            System.out.println("2. Dormir");
+                                            System.out.println("3. Jugar");
+                                            System.out.println("4. Tienda");
+                                            System.out.println("5. Estado");
+                                            System.out.println("6. Salir");
                                             break;
                                         case 3: //Tijera
                                             System.out.println("número random: " + randomNum);
                                             System.out.println("Has perdido.");
                                             felicidad -= 1;
+                                            if (hambre == 0 || energia == 0 || felicidad == 0) {
+                                                System.out.println("El estado actual de " + nombreTamagotchi + "→ Energía: " + energia + " | Hambre: " + hambre + " | Felicidad: " + felicidad + " | Dinero: " + dinero);
+                                                System.out.println(nombreTamagotchi + " ha muerto.");
+                                                System.exit(0);
+                                            }
                                             System.out.println("El estado actual de " + nombreTamagotchi + "→ Energía: " + energia + " | Hambre: " + hambre + " | Felicidad: " + felicidad + " | Dinero: " + dinero);
+                                            System.out.println("Que desea hacer ahora?");
+                                            System.out.println("1. Dar de comer");
+                                            System.out.println("2. Dormir");
+                                            System.out.println("3. Jugar");
+                                            System.out.println("4. Tienda");
+                                            System.out.println("5. Estado");
+                                            System.out.println("6. Salir");
                                             break;
                                     }
                                     break;
@@ -200,7 +324,19 @@ public class Main {
                                             System.out.println("número random: " + randomNum);
                                             System.out.println("Has perdido.");
                                             felicidad -= 1;
+                                            if (hambre == 0 || energia == 0 || felicidad == 0) {
+                                                System.out.println("El estado actual de " + nombreTamagotchi + "→ Energía: " + energia + " | Hambre: " + hambre + " | Felicidad: " + felicidad + " | Dinero: " + dinero);
+                                                System.out.println(nombreTamagotchi + " ha muerto.");
+                                                System.exit(0);
+                                            }
                                             System.out.println("El estado actual de " + nombreTamagotchi + "→ Energía: " + energia + " | Hambre: " + hambre + " | Felicidad: " + felicidad + " | Dinero: " + dinero);
+                                            System.out.println("Que desea hacer ahora?");
+                                            System.out.println("1. Dar de comer");
+                                            System.out.println("2. Dormir");
+                                            System.out.println("3. Jugar");
+                                            System.out.println("4. Tienda");
+                                            System.out.println("5. Estado");
+                                            System.out.println("6. Salir");
                                             break;
                                         case 2: // Papel
                                             System.out.println("número random: " + randomNum);
@@ -208,47 +344,97 @@ public class Main {
                                             felicidad += 2;
                                             dinero += 3;
                                             energia -= 2;
+                                            if (hambre == 0 || energia == 0 || felicidad == 0) {
+                                                System.out.println("El estado actual de " + nombreTamagotchi + "→ Energía: " + energia + " | Hambre: " + hambre + " | Felicidad: " + felicidad + " | Dinero: " + dinero);
+                                                System.out.println(nombreTamagotchi + " ha muerto.");
+                                                System.exit(0);
+                                            }
                                             System.out.println("El estado actual de " + nombreTamagotchi + "→ Energía: " + energia + " | Hambre: " + hambre + " | Felicidad: " + felicidad + " | Dinero: " + dinero);
+                                            System.out.println("Que desea hacer ahora?");
+                                            System.out.println("1. Dar de comer");
+                                            System.out.println("2. Dormir");
+                                            System.out.println("3. Jugar");
+                                            System.out.println("4. Tienda");
+                                            System.out.println("5. Estado");
+                                            System.out.println("6. Salir");
                                             break;
                                         case 3: //Tijera
                                             System.out.println("número random: " + randomNum);
                                             System.out.println("Empate!");
+                                            System.out.println("El estado actual de " + nombreTamagotchi + "→ Energía: " + energia + " | Hambre: " + hambre + " | Felicidad: " + felicidad + " | Dinero: " + dinero);
+                                            System.out.println("Que desea hacer ahora?");
+                                            System.out.println("1. Dar de comer");
+                                            System.out.println("2. Dormir");
+                                            System.out.println("3. Jugar");
+                                            System.out.println("4. Tienda");
+                                            System.out.println("5. Estado");
+                                            System.out.println("6. Salir");
                                             break;
                                     }
-                                    System.out.println("El estado actual de " + nombreTamagotchi + "→ Energía: " + energia + " | Hambre: " + hambre + " | Felicidad: " + felicidad + " | Dinero: " + dinero);
                                     break;
                             }
                         }
-                            else{
-                                System.out.println("Estas en el juego de los dados");
-                                System.out.println("A continuación se tiraran dos dados, si gana el jugador obtendra +2 de felicidad, +3 monedas -2 energia, en cambio si pierde, pierde -1 de felicidad.");
+                            else {
+                            System.out.println("Estas en el juego de los dados");
+                            System.out.println("A continuación se tiraran dos dados, si gana el jugador obtendra +2 de felicidad, +3 monedas y -2 energia, en cambio si pierde, pierde -1 de felicidad, y por último en caso de empate no pasara nada.");
 
-                                int dadoTamagotchi = (int) (Math.random() * 6) + 1;
-                                int dadoJugador = (int) (Math.random() * 6) + 1;
+                            int dadoTamagotchi = (int) (Math.random() * 6) + 1;
+                            int dadoJugador = (int) (Math.random() * 6) + 1;
 
-                                System.out.println("El número de " + nombreTamagotchi + " es " + dadoTamagotchi);
-                                System.out.println("El número del jugador es " + dadoJugador);
+                            System.out.println("El número de " + nombreTamagotchi + " es " + dadoTamagotchi);
+                            System.out.println("El número del jugador es " + dadoJugador);
 
-                                if (dadoTamagotchi > dadoJugador) {
-                                    felicidad -= 1;
-                                    System.out.println("Perdiste.");
+                            if (dadoTamagotchi > dadoJugador) {
+                                felicidad -= 1;
+                                if (hambre == 0 || energia == 0 || felicidad == 0) {
                                     System.out.println("El estado actual de " + nombreTamagotchi + "→ Energía: " + energia + " | Hambre: " + hambre + " | Felicidad: " + felicidad + " | Dinero: " + dinero);
-                                } else if (dadoJugador > dadoTamagotchi) {
-                                    felicidad += 2;
-                                    dinero += 3;
-                                    energia -= 2;
-
-                                    System.out.println("Has ganado.");
-                                    System.out.println("El estado actual de " + nombreTamagotchi + "→ Energía: " + energia + " | Hambre: " + hambre + " | Felicidad: " + felicidad + " | Dinero: " + dinero);
-
+                                    System.out.println(nombreTamagotchi + " ha muerto.");
+                                    System.exit(0);
                                 }
-                                else {
-                                    System.out.println("Habeis empatado.");
+                                System.out.println("Perdiste.");
+                                System.out.println("El estado actual de " + nombreTamagotchi + "→ Energía: " + energia + " | Hambre: " + hambre + " | Felicidad: " + felicidad + " | Dinero: " + dinero);
+                                System.out.println("Que desea hacer ahora?");
+                                System.out.println("1. Dar de comer");
+                                System.out.println("2. Dormir");
+                                System.out.println("3. Jugar");
+                                System.out.println("4. Tienda");
+                                System.out.println("5. Estado");
+                                System.out.println("6. Salir");
+                            } else if (dadoJugador > dadoTamagotchi) {
+                                felicidad += 2;
+                                dinero += 3;
+                                energia -= 2;
+                                if (hambre == 0 || energia == 0 || felicidad == 0) {
                                     System.out.println("El estado actual de " + nombreTamagotchi + "→ Energía: " + energia + " | Hambre: " + hambre + " | Felicidad: " + felicidad + " | Dinero: " + dinero);
+                                    System.out.println(nombreTamagotchi + " ha muerto.");
+                                    System.exit(0);
                                 }
+                                System.out.println("Has ganado.");
+                                System.out.println("El estado actual de " + nombreTamagotchi + "→ Energía: " + energia + " | Hambre: " + hambre + " | Felicidad: " + felicidad + " | Dinero: " + dinero);
+                                System.out.println("Que desea hacer ahora?");
+                                System.out.println("1. Dar de comer");
+                                System.out.println("2. Dormir");
+                                System.out.println("3. Jugar");
+                                System.out.println("4. Tienda");
+                                System.out.println("5. Estado");
+                                System.out.println("6. Salir");
 
+                            } else {
+                                System.out.println("Habeis empatado.");
+                                System.out.println("El estado actual de " + nombreTamagotchi + "→ Energía: " + energia + " | Hambre: " + hambre + " | Felicidad: " + felicidad + " | Dinero: " + dinero);
+                                System.out.println("Que desea hacer ahora?");
+                                System.out.println("1. Dar de comer");
+                                System.out.println("2. Dormir");
+                                System.out.println("3. Jugar");
+                                System.out.println("4. Tienda");
+                                System.out.println("5. Estado");
+                                System.out.println("6. Salir");
+                            }
+                        }
+                            
 
                             }
+                    
                         }
                 }
             }
