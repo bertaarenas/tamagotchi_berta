@@ -490,6 +490,18 @@ public class Main {
                         else if (hambre <= 3) {
                             System.out.println(nombreTamagotchi + " tiene hambre, deberías darle de comer");
                         }
+                        else if (energia <= 3) {
+                            System.out.println(nombreTamagotchi + "está muy cansado, necesita dormir");
+                        }
+                        else if (felicidad <= 3) {
+                            System.out.println(nombreTamagotchi + " está triste, juega con él");
+                        }
+                        else if (energia > 7 && hambre < 5) {
+                            System.out.println(nombreTamagotchi + " está hiperactivo ");
+                        }
+                        else if (energia <= 3 && energia <= 3 && felicidad <= 3 ) {
+                            System.out.println(nombreTamagotchi + " está en las últimas...");
+                        }
                 }
 
 
