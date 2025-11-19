@@ -482,26 +482,35 @@ public class Main {
                         break;
 
                     case 5:
+
                         System.out.println("Bienvenido al estado, aquí puedes ver las estadísticas de tu mascota.");
 
-                        if (felicidad > 7 && hambre > 4 && energia > 5 ) {
-                            System.out.println(nombreTamagotchi + " esta feliz y activo.");
+                        if (felicidad <= 3 && hambre <= 3 && energia <= 3) {
+                            System.out.println(nombreTamagotchi + " está en las últimas...");
                         }
                         else if (hambre <= 3) {
                             System.out.println(nombreTamagotchi + " tiene hambre, deberías darle de comer");
                         }
                         else if (energia <= 3) {
-                            System.out.println(nombreTamagotchi + "está muy cansado, necesita dormir");
+                            System.out.println(nombreTamagotchi + " está muy cansado, necesita dormir");
                         }
                         else if (felicidad <= 3) {
                             System.out.println(nombreTamagotchi + " está triste, juega con él");
                         }
                         else if (energia > 7 && hambre < 5) {
-                            System.out.println(nombreTamagotchi + " está hiperactivo ");
+                            System.out.println(nombreTamagotchi + " está hiperactivo");
                         }
-                        else if (energia <= 3 && energia <= 3 && felicidad <= 3 ) {
-                            System.out.println(nombreTamagotchi + " está en las últimas...");
+                        else if (felicidad > 7 && hambre > 4 && energia > 5) {
+                            System.out.println(nombreTamagotchi + " está feliz y activo.");
                         }
+                        System.out.println("¿Qué desea hacer ahora?");
+                        System.out.println("1. Dar de comer");
+                        System.out.println("2. Dormir");
+                        System.out.println("3. Jugar");
+                        System.out.println("4. Tienda");
+                        System.out.println("5. Estado");
+                        System.out.println("6. Salir");
+                        break;
                 }
 
 
