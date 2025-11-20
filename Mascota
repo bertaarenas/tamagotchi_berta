@@ -450,9 +450,7 @@ public class Main {
                             } else {
                                 System.out.println("No tienes suficiente dinero para comprar una hamburguesa, dinero: " + dinero);
                             }
-                        }
-
-                        else if (tienda.equals("Pretzel") || tienda.equals("pretzel")) {
+                        } else if (tienda.equals("Pretzel") || tienda.equals("pretzel")) {
                             if (dinero >= 2) {
                                 dinero -= 2;
                                 pretzel++;
@@ -460,8 +458,7 @@ public class Main {
                             } else {
                                 System.out.println("No tienes suficiente dinero para comprar un pretzel, dinero: " + dinero);
                             }
-                        }
-                        else if (tienda.equals("Perrito") || tienda.equals("perrito")) {
+                        } else if (tienda.equals("Perrito") || tienda.equals("perrito")) {
                             if (dinero >= 3) {
                                 dinero -= 3;
                                 perrito++;
@@ -487,20 +484,15 @@ public class Main {
 
                         if (felicidad <= 3 && hambre <= 3 && energia <= 3) {
                             System.out.println(nombreTamagotchi + " está en las últimas...");
-                        }
-                        else if (hambre <= 3) {
+                        } else if (hambre <= 3) {
                             System.out.println(nombreTamagotchi + " tiene hambre, deberías darle de comer");
-                        }
-                        else if (energia <= 3) {
+                        } else if (energia <= 3) {
                             System.out.println(nombreTamagotchi + " está muy cansado, necesita dormir");
-                        }
-                        else if (felicidad <= 3) {
+                        } else if (felicidad <= 3) {
                             System.out.println(nombreTamagotchi + " está triste, juega con él");
-                        }
-                        else if (energia > 7 && hambre < 5) {
+                        } else if (energia > 7 && hambre < 5) {
                             System.out.println(nombreTamagotchi + " está hiperactivo");
-                        }
-                        else if (felicidad > 7 && hambre > 4 && energia > 5) {
+                        } else if (felicidad > 7 && hambre > 4 && energia > 5) {
                             System.out.println(nombreTamagotchi + " está feliz y activo.");
                         }
                         System.out.println("¿Qué desea hacer ahora?");
@@ -511,6 +503,10 @@ public class Main {
                         System.out.println("5. Estado");
                         System.out.println("6. Salir");
                         break;
+
+                    case 6:
+                        System.out.println("Has salido del juego.");
+                        System.exit(0);
                 }
 
 
