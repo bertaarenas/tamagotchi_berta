@@ -1,0 +1,1 @@
+Aquest joc es diu Tamagotchi Berta, es tracta de tenir una mascota virtual amb la que pots interactuar. El primer que he fet ha sigut deixar a l'usuari introduir el nom desitjat per a la seva mascota i que pogués escogir entre 5 "skins". Lo seguent ha sigut fer un menú d'opcions on hi havia desde l'opció 1 que era donar-li de menjar després 
